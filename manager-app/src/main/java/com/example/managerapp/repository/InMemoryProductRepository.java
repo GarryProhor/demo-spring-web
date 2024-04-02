@@ -14,7 +14,7 @@ public class InMemoryProductRepository implements ProductRepository{
     private final List<Product> products = Collections.synchronizedList(new LinkedList<>());
 
     public InMemoryProductRepository() {
-        IntStream.range(1,4)
+        IntStream.range(1,5)
                 .forEach(i -> this.products.add(
                         new Product(i,
                         "Товар №%d".formatted(i),
